@@ -16,6 +16,9 @@
 @property (strong, nonatomic) IBOutlet UISlider *blueSlider;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) DBColorNames *colorNames;
+@property (weak, nonatomic) IBOutlet UILabel *redValueLabel;
+@property (weak, nonatomic) IBOutlet UILabel *greenValueLabel;
+@property (weak, nonatomic) IBOutlet UILabel *blueValueLabel;
 
 @end
 
@@ -37,6 +40,9 @@
 - (UIColor *)updateViewBackgroundColor {
     UIColor *color = [UIColor colorWithRed:self.redSlider.value green:self.greenSlider.value blue:self.blueSlider.value alpha:1.0f];
     self.view.backgroundColor = color;
+    self.redValueLabel.text = [NSString stringWithFormat:@"%02x", (int)(_redSlider.value * 255.0)];
+    self.greenValueLabel.text = [NSString stringWithFormat:@"%02x", (int)(_greenSlider.value * 255.0)];
+    self.blueValueLabel.text = [NSString stringWithFormat:@"%02x", (int)(_blueSlider.value * 255.0)];
     return color;
 }
 
