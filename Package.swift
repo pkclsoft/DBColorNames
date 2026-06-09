@@ -4,15 +4,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "DBColorNamesSwift",
+    name: "DBColorNames",
     platforms: [
         .macOS(.v13), .iOS(.v16), .tvOS(.v14)
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "DBColorNamesSwift",
-            targets: ["DBColorNamesSwift"]
+            name: "DBColorNames",
+            targets: ["DBColorNames"]
         ),
     ],
     dependencies: [
@@ -24,12 +24,12 @@ let package = Package(
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "DBColorNamesSwift",
+            name: "DBColorNames",
             dependencies:  ["UXKit"]
         ),
         .testTarget(
-            name: "DBColorNamesSwiftTests",
-            dependencies: ["DBColorNamesSwift"]
+            name: "DBColorNamesTests",
+            dependencies: ["DBColorNames"]
         ),
     ]
 )

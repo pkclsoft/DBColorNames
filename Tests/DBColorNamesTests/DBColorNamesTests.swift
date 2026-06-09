@@ -1,8 +1,8 @@
 import XCTest
 import UXKit
-@testable import DBColorNamesSwift
+@testable import DBColorNames
 
-final class DBColorNamesSwiftTests: XCTestCase {
+final class DBColorNamesTests: XCTestCase {
     
     func testBarbiePink() throws {
         
